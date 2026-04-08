@@ -1,0 +1,29 @@
+class Stack:
+    def __init__(self):
+        self.items = [45,23,44,58,97]
+
+    def push(self, item):
+        self.items.append(item)
+        print(item, "pushed into stack")
+
+    def pop(self):
+        if len(self.items) == 0:
+            print("Stack is empty")
+        else:
+            print(self.items.pop(), "popped from stack")
+
+    def peek(self):
+        if len(self.items) == 0:
+            print("Stack is empty")
+        else:
+            print("Top element is:", self.items[-1])
+
+
+s = Stack()
+
+s.push(44)
+s.push(58)
+
+s.peek()
+s.pop()
+s.peek()
